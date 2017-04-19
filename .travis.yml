@@ -5,8 +5,8 @@ script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --disable-external
 branches:
-  except:
-    - master
+  only:
+    - devel
 after_success:
   - git clone https://$GITHUB_REPO
   - cd $(basename ${GITHUB_REPO%.git})
