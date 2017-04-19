@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Pagina Inicial</title>
+    <meta charset="UTF-8">
+    <title>{{ site.title }}</title>
+    <!- Google Fonts ->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
-<h1>Pagina Inicial</h1>
+    <div class="wrapper">
+        <a href="https://github.com/{{ site.github_username }}">@meliga ☎</a>
+        {% githubchart site.github_username %}
+        <p>FrontEndDesign</p>
+    </div>
+    <div class="social-icons">
+      {% include social-icons.html %}
+    </div>
 </body>
 </html>
